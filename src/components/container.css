@@ -1,0 +1,28 @@
+/* Custom container styling */
+.custom-container {
+    max-width: 1200px; /* Define the maximum width */
+    margin: 0 auto;    /* Center the container */
+    padding: 0 15px;   /* Add padding for inner spacing */
+    width: 100%;       /* Ensure the container spans full width initially */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+    .custom-container {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 992px) {
+    .custom-container {
+        max-width: 768px;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
