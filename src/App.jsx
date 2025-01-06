@@ -8,7 +8,9 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <Router>
+      <div className="sticky top-0 z-50">
       <Navbar />
+      </div>
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<h2>About Page</h2>} />
