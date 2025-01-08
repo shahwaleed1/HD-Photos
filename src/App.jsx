@@ -4,22 +4,18 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Images from "./components/Images";
 import Footer from "./components/Footer";
+import Image from "./components/Image";
 
 const App = () => {
   return (
     <Router>
       <div className="sticky top-0 z-50">
-      <Navbar />
+        <Navbar />
       </div>
       <Routes>
         <Route path="/" element={<Hero />} />
-        <Route path="/about" element={<h2>About Page</h2>} />
-        <Route path="/services" element={<h2>Services Page</h2>} />
-        <Route path="/contact" element={<h2>Contact Page</h2>} />
+        <Route path="/image/:imageId" element={<Image />} />
       </Routes>
-      <div className="my-4">
-        <Images />
-      </div>
       <Footer />
     </Router>
   );

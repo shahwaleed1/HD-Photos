@@ -13,7 +13,7 @@ const Navbar = () => {
             <Link to="/">
               <img className="max-w-[3.50rem]" src="logo.png" alt="logo" />
             </Link>
-            {<Searchbox />}
+            {/* {<Searchbox />} */}
           </div>
           <div className="hidden md:flex space-x-4">
             <Link

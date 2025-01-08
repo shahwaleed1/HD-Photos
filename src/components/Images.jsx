@@ -3,6 +3,7 @@ import "./container.css";
 import axios from "axios";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Loading from "./Loading";
+import { Link } from "react-router-dom";
 
 const ApiUrl = "https://api.unsplash.com/photos";
 const key = "JFuV6cYjEWcpRcj-lw_89K3nupi_VdngQdiHtWXDouk";
@@ -14,7 +15,7 @@ const Images = () => {
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(0);
   const [query, setQuery] = useState("");
-  const [error, setError] =useState (null)
+  const [error, setError] = useState(null);
 
   const fatch = async () => {
     setLoading(true);
@@ -67,7 +68,7 @@ const Images = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [loading]); // Add `loading` as a dependency
-  
+
   return (
     <div className="custom-container">
       {loading && <Loading />}
@@ -75,13 +76,16 @@ const Images = () => {
       <ResponsiveMasonry columnsCountBreakPoints={{ 400: 1, 750: 2, 900: 3 }}>
         <Masonry gutter="15px">
           {images.map((imge, i) => (
-            <img
-              src={imge.urls.small}
-              alt={imge.alt_description}
-              key={i}
-              style={{ width: "100%", display: "block" }}
-              className="cursor-pointer hover:shadow-lg rounded-sm hover:scale-105 transition-transform duration-300"
-            />
+            <div key={i}>
+              <Link to={`/image/${imge.id}`}>
+                <img
+                  src={imge.urls.small}
+                  alt={imge.alt_description}
+                  style={{ width: "100%", display: "block" }}
+                  className="cursor-pointer hover:shadow-lg rounded-sm hover:scale-105 transition-transform duration-300"
+                />
+              </Link>
+            </div>
           ))}
         </Masonry>
       </ResponsiveMasonry>

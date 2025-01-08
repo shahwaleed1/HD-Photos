@@ -1,6 +1,7 @@
 import React from "react";
 import Searchbox from "./Searchbox.jsx";
 import "./container.css";
+import Images from "./Images.jsx";
 
 const Hero = () => {
   return (
@@ -20,7 +21,7 @@ const Hero = () => {
             Find the perfect image effortlessly with our advanced search,
             designed to deliver stunning HD photos tailored to your needs.
           </p>
-          <Searchbox />
+          {/* <Searchbox /> */}
         </div>
         <div className="w-1/2 flex items-center">
           <video
@@ -33,6 +34,9 @@ const Hero = () => {
             autoPlay
           ></video>
         </div>
+      </div>
+      <div className="my-6">
+      <Images />
       </div>
     </>
   );
