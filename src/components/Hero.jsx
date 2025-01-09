@@ -6,24 +6,24 @@ import Images from "./Images.jsx";
 const Hero = () => {
   return (
     <>
-      <div className="custom-container flex items-center gap-8 flex-wrap-reverse">
+      <div className="custom-container flex items-center justify-around gap-8 flex-wrap">
         <div className="text-gray-600 w-1/2 flex-1 mb-4">
-          <h1 className="text-4xl font-bold ms-10  mt-4 mb-1 ">
+          <h1 className="text-4xl font-bold mt-4 mb-1 ms-1">
             HD Photos<span>🎉</span>
           </h1>
-          <p className="ms-10">
+          <p className="ms-1">
             HD Photo is your ultimate destination for stunning, high-definition
             photography. Discover a curated collection of breathtaking images,
             perfect for personal or professional use, all crafted to inspire and
             elevate your visual projects.
           </p>
-          <p className="ms-10 mt-10 mb-1">
+          <p className="mt-10 mb-1 ms-1">
             Find the perfect image effortlessly with our advanced search,
             designed to deliver stunning HD photos tailored to your needs.
           </p>
           {/* <Searchbox /> */}
         </div>
-        <div className="w-1/2 flex items-center">
+        <div className="w-1/2 flex justify-center">
           <video
             className="rounded-lg p-4"
             width={400}
@@ -36,7 +36,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="my-6">
-      <Images />
+        <Images />
       </div>
     </>
   );
