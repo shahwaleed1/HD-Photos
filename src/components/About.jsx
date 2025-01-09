@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
   const imgStyle = {
@@ -18,7 +19,12 @@ const About = () => {
   return (
     <>
       <div className="flex items-center justify-around flex-wrap gap-12 my-8">
-        <div className="flex items-center flex-col text-justify max-w-[35rem] m-3">
+        <motion.div
+          className="flex items-center flex-col text-justify max-w-[35rem] m-3"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
           <img src="logo.png" alt="HD Photo logo" style={imgStyle} />
           <h2 style={heading}>HD Photos</h2>
           <p className="text-slate-600">
@@ -29,8 +35,13 @@ const About = () => {
             Waleed's expertise in creating visually appealing and
             performance-optimized applications.
           </p>
-        </div>
-        <div className="flex items-center text-justify flex-col max-w-[35rem] m-3">
+        </motion.div>
+        <motion.div
+          className="flex items-center text-justify flex-col max-w-[35rem] m-3"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
           <img src="profile_pic.png" alt="" style={imgStyle} />
           <h2 style={heading}>Website Developer</h2>
           <p className="text-slate-600">
@@ -41,7 +52,7 @@ const About = () => {
             problem-solving and attention to detail make him a go-to
             professional for building scalable and impactful digital solutions.
           </p>
-        </div>
+        </motion.div>
       </div>
     </>
   );
