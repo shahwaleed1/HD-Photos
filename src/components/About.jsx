@@ -25,7 +25,12 @@ const About = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <img src="logo.png" alt="HD Photo logo" style={imgStyle} />
+          <img
+            src="logo.png"
+            alt="HD Photo logo"
+            style={imgStyle}
+            className="transition duration-700 ease-in-out hover:scale-105 hover:rotate-6"
+          />
           <h2 style={heading}>HD Photos</h2>
           <p className="text-slate-600">
             HD Photos is a sleek and responsive web application built by Waleed,
@@ -42,7 +47,12 @@ const About = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <img src="profile_pic.png" alt="" style={imgStyle} />
+          <img
+            src="profile_pic.png"
+            alt=""
+            style={imgStyle}
+            className="transition duration-700 ease-in-out hover:scale-105 hover:rotate-6"
+          />
           <h2 style={heading}>Website Developer</h2>
           <p className="text-slate-600">
             Waleed is a talented and innovative full-stack developer with
