@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Images from "./components/Images";
 import Footer from "./components/Footer";
 import Image from "./components/Image";
+import About from "./components/About";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       </div>
       <Routes>
         <Route path="/" element={<Hero />} />
+        <Route path="/about" element={<About />} />
         <Route path="/image/:imageId" element={<Image />} />
       </Routes>
       <Footer />
