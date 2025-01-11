@@ -6,8 +6,8 @@ import Images from "./Images.jsx";
 const Hero = () => {
   return (
     <>
-      <div className="custom-container flex items-center justify-around gap-8 flex-wrap">
-        <div className="text-gray-600 w-1/2 flex-1 mb-4">
+      <div className="custom-container flex items-center justify-around gap-4 flex-wrap overflow-x-hidden">
+        <div className="text-gray-600 w-1/2 mb-4 basis-[400px] ">
           <h1 className="text-4xl font-bold mt-4 mb-1 ms-1">
             HD Photos<span>🎉</span>
           </h1>
@@ -25,8 +25,7 @@ const Hero = () => {
         </div>
         <div className="w-1/2 flex justify-center">
           <video
-            className="rounded-lg p-4"
-            width={400}
+            className="rounded-lg p-6 max-w-[400px]"
             src="hero_video.mp4"
             type="video/mp4"
             loop

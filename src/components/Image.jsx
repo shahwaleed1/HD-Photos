@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "./Loading";
+import './container.css'
 
 const Image = () => {
   const [imagedata, setImagedata] = useState(null);
@@ -31,11 +32,11 @@ const Image = () => {
   };
 
   return (
-    <div className="flex items-center justify-center my-4">
+    <div className="custom-container flex items-center justify-center my-4">
       {imagedata ? (
         <div>
           <button
-            className="px-4 py-2 bg-slate-600 shadow-lg text-white rounded-md float-end -translate-x-28 mt-5 hover:bg-slate-700 "
+            className="px-4 py-2 bg-slate-600 shadow-lg text-white rounded-md float-end -translate-x-28 translate-y-5 hover:bg-slate-700 "
             onClick={async () => {
               try {
                 const response = await fetch(imagedata.urls.full);

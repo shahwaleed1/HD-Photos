@@ -43,7 +43,7 @@ const Navbar = () => {
           </div>
           <div className="flex md:hidden">
             <button
-              className="text-white hover:text-gray-300 focus:outline-none"
+              className="text-gray-400 hover:text-gray-500 focus:outline-none"
               onClick={() => setIsOpen(!isOpen)}
             >
               <svg
@@ -78,25 +78,25 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               to="/"
-              className="text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="text-gray-400 block px-3 py-2 rounded-md text-base font-medium"
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="text-gray-400 block px-3 py-2 rounded-md text-base font-medium"
             >
               About
             </Link>
             <Link
               to="/services"
-              className="text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="text-gray-400 block px-3 py-2 rounded-md text-base font-medium"
             >
               Services
             </Link>
             <Link
               to="/contact"
-              className="text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="text-gray-400 block px-3 py-2 rounded-md text-base font-medium"
             >
               Contact
             </Link>
