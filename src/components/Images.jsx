@@ -5,8 +5,8 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Loading from "./Loading";
 import { Link } from "react-router-dom";
 
-const ApiUrl = "https://api.unsplash.com/photos";
-const key = "JFuV6cYjEWcpRcj-lw_89K3nupi_VdngQdiHtWXDouk";
+const ApiUrl =(import.meta.env.VITE_API)
+const key = (import.meta.env.VITE_SECRET_KEY)
 const clientID = `?client_id=${key}`;
 const searchUrl = "https://api.unsplash.com/search/photos";
 

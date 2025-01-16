@@ -16,7 +16,7 @@ const Image = () => {
 
   const fetchImageById = async (imageId) => {
     const ApiUrl = `https://api.unsplash.com/photos/${imageId}`;
-    const accessKey = "JFuV6cYjEWcpRcj-lw_89K3nupi_VdngQdiHtWXDouk";
+    const accessKey = (import.meta.env.VITE_SECRET_KEY)
 
     try {
       const response = await axios.get(ApiUrl, {
