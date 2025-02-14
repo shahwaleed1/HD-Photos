@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Searchbox from './Searchbox';
+
 
 
 const Navbar = () => {
@@ -19,7 +21,7 @@ const Navbar = () => {
             <Link to="/">
               <img className="max-w-[3.50rem]" src="logo.png" alt="logo" />
             </Link>
-            {/* <SearchBox /> */}
+            {/* <Searchbox /> */}
           </div>
           <div className="hidden md:flex space-x-4">
             <Link
