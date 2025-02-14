@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import SearchBox from "./SearchBox.jsx";
 import "./container.css";
 import Images from "./Images.jsx";
 
