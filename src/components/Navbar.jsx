@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Searchbox from "./Searchbox.jsx";
+import SearchBox from "./SearchBox";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleSearch = (searchTerm) => {
+    console.log("Search term:", searchTerm);
+    // Implement your search logic here
+  };
+  
 
   return (
     <nav className="backdrop-blur-lg bg-[rgba(35, 35, 35, 0.5)] drop-shadow-xl">
@@ -13,7 +20,7 @@ const Navbar = () => {
             <Link to="/">
               <img className="max-w-[3.50rem]" src="logo.png" alt="logo" />
             </Link>
-            {/* {<Searchbox />} */}
+            {/* <SearchBox /> */}
           </div>
           <div className="hidden md:flex space-x-4">
             <Link

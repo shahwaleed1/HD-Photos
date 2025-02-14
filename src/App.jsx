@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -8,6 +8,7 @@ import Image from "./components/Image";
 import About from "./components/About";
 
 const App = () => {
+
   return (
     <Router>
       <div className="sticky top-0 z-50">

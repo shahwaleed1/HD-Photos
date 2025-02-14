@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 import { Search } from "lucide-react";
 
-function Searchbox() {
-  
+function SearchBox({ onSearch }) {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSearch(searchTerm);
+  };
 
   return (
-    <div className="flex items-center ms-8">
-      <div className="">
-        <form className="relative group">
+    <div className="flex items-center p-4">
+        <form className="relative group min-w-[25rem]" onSubmit={handleSubmit}>
           <input
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
             type="text"
             placeholder="Search photos..."
-            className="min-w-[20rem] h-12 px-6 pr-12 text-lg rounded-full border-2 border-gray-200 
+            className="min-w-full h-12 px-6 pr-12 text-lg rounded-full border-2 border-gray-200 
                      focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-200 
                      transition-all duration-300 ease-in-out bg-white shadow-sm
                      placeholder:text-gray-400"
@@ -25,9 +31,8 @@ function Searchbox() {
             <Search size={24} />
           </button>
         </form>
-      </div>
     </div>
   );
 }
 
-export default Searchbox;
+export default SearchBox;

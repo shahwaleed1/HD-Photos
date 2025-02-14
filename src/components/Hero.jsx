@@ -1,9 +1,15 @@
-import React from "react";
-import Searchbox from "./Searchbox.jsx";
+import React, { useState } from "react";
+import SearchBox from "./SearchBox.jsx";
 import "./container.css";
 import Images from "./Images.jsx";
 
 const Hero = () => {
+  const [query, setQuery] = useState("");
+
+  const handleSearchSubmit = (searchTerm) => {
+    setQuery(searchTerm);
+  };
+
   return (
     <>
       <div className="custom-container flex items-center justify-around gap-4 flex-wrap overflow-x-hidden">
@@ -21,7 +27,7 @@ const Hero = () => {
             Find the perfect image effortlessly with our advanced search,
             designed to deliver stunning HD photos tailored to your needs.
           </p>
-          {/* <Searchbox /> */}
+          {/* <SearchBox onSearch={handleSearchSubmit} /> */}
         </div>
         <div className="w-1/2 flex justify-center">
           <video
