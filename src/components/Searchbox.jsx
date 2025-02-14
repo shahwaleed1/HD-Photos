@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Search } from "lucide-react";
 
-function SearchBox({ onSearch }) {
+function Searchbox({ onSearch }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSubmit = (e) => {
@@ -35,4 +35,4 @@ function SearchBox({ onSearch }) {
   );
 }
 
-export default SearchBox;
+export default Searchbox;

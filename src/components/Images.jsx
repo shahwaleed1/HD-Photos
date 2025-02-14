@@ -222,7 +222,7 @@ import axios from "axios";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Loading from "./Loading";
 import { Link } from "react-router-dom";
-import SearchBox from "./SearchBox";
+import Searchbox from "./Searchbox";
 
 const ApiUrl = import.meta.env.VITE_API;
 const key = import.meta.env.VITE_SECRET_KEY;
@@ -297,7 +297,7 @@ const Images = () => {
   return (
     <div className="custom-container">
       <div className="my-6">
-        <SearchBox onSearch={handleSearchSubmit} />
+        <Searchbox onSearch={handleSearchSubmit} />
       </div>
 
       {loading && <Loading />}
