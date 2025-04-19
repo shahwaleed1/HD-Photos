@@ -1,0 +1,30 @@
+.loader_main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.load_circle {
+  margin: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+  background: conic-gradient(
+    #f87171,
+    #fbbf24,
+    #34d399,
+    #3b82f6,
+    #6366f1,
+    #9333ea,
+    #f87171
+  );
+  border-radius: 100%;
+  animation: circle 3s ease-out infinite;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
