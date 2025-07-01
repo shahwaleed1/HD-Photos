@@ -300,7 +300,7 @@ const Images = () => {
         <Searchbox onSearch={handleSearchSubmit} />
       </div>
 
-      {loading && <Loading />}
+
       {error && <p className="text-center text-red-500">⚠️ Error: {error}</p>}
 
       <ResponsiveMasonry columnsCountBreakPoints={{ 400: 1, 750: 2, 900: 3 }}>
@@ -319,6 +319,9 @@ const Images = () => {
           ))}
         </Masonry>
       </ResponsiveMasonry>
+      <div className="my-6">
+        {loading && <Loading />}
+      </div>
     </div>
   );
 };
