@@ -27,6 +27,7 @@ function Searchbox({ onSearch }) {
             className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full
                      text-gray-400 hover:text-blue-500 transition-colors duration-200
                      focus:outline-none focus:ring-2 focus:ring-blue-200"
+            aria-label="search"
           >
             <Search size={24} />
           </button>
